@@ -21,20 +21,12 @@ $(document).ready(function (){
         }
     });
     
-    var numCata
+    var numCata = 0;
     var yourPts = []
     var totalPts = [];
     var Weight = [];
     var Final = [];
     //Have the top be #, yourPts, totalPts, Weight
-    $("#createForm").click(function(){
-        numCata = $("#numCata").val();
-        for(i=0;i<numCata;i++)
-        {
-           $("#formPlace").append("<input type='text' onclick='this.value=\"\"' value='Your Points' id='"+i+"a"+"'>"+"<input type='text' onclick='this.value=\"\"' value='Total Points' id='"+i+"b"+"'>"+"<input type='text' onclick='this.value=\"\"' value='Category Weight' id='"+i+"c"+"'>"+"<br>")
-        }
-        $("#formPlace").append("<input type='button' id='calcButton' value='Calculate'>");
-        
         $("#calcButton").click(function() {
         for(i=0;i<numCata;i++)
         {
@@ -44,8 +36,21 @@ $(document).ready(function (){
             Final.push((yourPts[i]/totalPts[i])*Weight[i]);
         }
     });
-    });
     
+    $("#addButton").click(function() {
+        numCata = numCata + 1
+       $("#formPlace").append("<input type='text' onclick='this.value=\"\"' value='Your Points' id='"+numCata+"a"+"'>"+"<input type='text' onclick='this.value=\"\"' value='Total Points' id='"+numCata+"b"+"'>"+"<input type='text' onclick='this.value=\"\"' value='Category Weight' id='"+numCata+"c"+"'>"+"<br>")  
+    })
+    
+    $("#subtractButton").click(function() {
+        if(numCata != 0)
+        {
+             $("#"+numCata+"a").remove();
+             $("#"+numCata+"b").remove();
+             $("#"+numCata+"c").remove();
+            numCata = numCata - 1;
+        }
+    });
     
 });
 //# is id
