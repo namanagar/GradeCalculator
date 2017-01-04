@@ -15,6 +15,9 @@
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
 	<link rel="stylesheet" href="css/tab.css">
+	<link rel="stylesheet" href="css/uiElements.css">
+	<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+	<script src="js/algo.js"></script>
 </head>
 <body class="demo" id="preloader">
 <!--[if lt IE 7]>
@@ -32,11 +35,27 @@
 		
 		
 			<div id="content">
-				<div id="tab0"></div>
-				<div id="tab1"></div>
+				<!-- Tabs count backwards; 0 is end page and 4 is the first tab visible !-->
+				<div id="tab0">
+				</div>
+				<div id="tab1" class="remove"></div>
 				<div id="tab2"></div>
-				<div id="tab3"></div>
-				<div id="tab4"></div>
+				<div id="tab3">
+					<center>
+					<input type='text' onclick='this.value=""' value='Your Points' id='0a'><br>
+					<input type='text' onclick='this.value=""' value='Total Points' id='0b'><br>
+					<input type='text' onclick='this.value=""' value='Category Weight' id='0c'><br>
+					<a id="addButton">+</a><a id="subtractButton">-</a><br>
+					<input type="button" id="createForm" value="Start Calculating">
+					<div id="formPlace"></div>
+					</center>
+				</div>
+				<div id="tab4">
+					<label class="switch">
+					  <input type="checkbox" id="checkbox">
+					  <div class="slider round"></div>
+					</label>
+				</div>
 			</div>
 </body>
 </html>
