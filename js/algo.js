@@ -39,7 +39,7 @@ $(document).ready(function (){
     
     $("#addButton").click(function() {
         numCata = numCata + 1
-       $("#formPlace").append("<input type='text' onclick='this.value=\"\"' value='Your Points' id='"+numCata+"a"+"'>"+"<input type='text' onclick='this.value=\"\"' value='Total Points' id='"+numCata+"b"+"'>"+"<input type='text' onclick='this.value=\"\"' value='Category Weight' id='"+numCata+"c"+"'>"+"<br>")  
+       $("#formPlace").append("<input type='text' onclick='this.value=\"\"' value='Your Points' id='"+numCata+"a"+"'>"+"<input type='text' onclick='this.value=\"\"' value='Total Points' id='"+numCata+"b"+"'>"+"<input type='text' onclick='this.value=\"\"' value='Category Weight' id='"+numCata+"c"+"'>"+"<br id='"+numCata+"d'>")  
     })
     
     $("#subtractButton").click(function() {
@@ -48,6 +48,7 @@ $(document).ready(function (){
              $("#"+numCata+"a").remove();
              $("#"+numCata+"b").remove();
              $("#"+numCata+"c").remove();
+             $("#"+numCata+"d").remove();
             numCata = numCata - 1;
         }
     });
