@@ -11,6 +11,11 @@ function genFields(numCatagories)//Generate # of fields based on how many difere
 
 //Instead of having it on an Button, have it onBlur Event
 $(document).ready(function (){
+    var numCata = 0;
+    var yourPts = []
+    var totalPts = [];
+    var Weight = [];
+    var Final = [];
     
     $('#checkbox').click(function(){
         if (this.checked) {
@@ -20,14 +25,8 @@ $(document).ready(function (){
             $('#tab1').animate({left: '0%'}, -100);
         }
     });
-    
-    var numCata = 0;
-    var yourPts = []
-    var totalPts = [];
-    var Weight = [];
-    var Final = [];
     //Have the top be #, yourPts, totalPts, Weight
-        $("#calcButton").click(function() {
+    $("#calcButton").click(function() {
         for(i=0;i<numCata;i++)
         {
             yourPts.push($("#"+i+"a").val());
