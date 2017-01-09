@@ -1,0 +1,2 @@
+This simple grade calculator will let you find out what you need on a final, your individual quarter/trimester percentage, and more, just with the power of simple mathematics! 
+All you need is infinite campus/your gradebook.

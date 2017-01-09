@@ -19,7 +19,7 @@ $(document).ready(function (){
     
     $('#checkbox').click(function(){
         if (this.checked) {
-            $('#tab1').animate({left: '-100%'}, 100);
+            $('#tab1').animate({left: '-100%'}, 400);
             //$('#tab1').css('display','none')
         } else {
             $('#tab1').animate({left: '0%'}, -100);
@@ -38,7 +38,7 @@ $(document).ready(function (){
     
     $("#addButton").click(function() {
         numCata = numCata + 1
-       $("#formPlace").append("<input type='text' onclick='this.value=\"\"' value='Your Points' id='"+numCata+"a"+"'>"+"<input type='text' onclick='this.value=\"\"' value='Total Points' id='"+numCata+"b"+"'>"+"<input type='text' onclick='this.value=\"\"' value='Category Weight' id='"+numCata+"c"+"'>"+"<br id='"+numCata+"d'>")  
+       $("#formPlace").append("<input class='rounded' type='text' placeholder='Your Points' id='"+numCata+"a"+"'>"+" <input class='rounded' type='text' placeholder='Total Points' id='"+numCata+"b"+"'>"+" <input class='rounded' type='text' placeholder='Category Weight' id='"+numCata+"c"+"'>"+"<br id='"+numCata+"d'>")  
     })
     
     $("#subtractButton").click(function() {
