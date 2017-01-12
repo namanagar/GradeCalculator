@@ -55,15 +55,15 @@
 					</center>
 				</div>
 				<div id="tab4"> <!-- Main page with Semester/Trimester switch !-->
+					<form class="sliderForm">
+						<p>What % of your grade is the Final?</p>
+						<input class="rangeSlider" type="range" value="50" oninput="document.getElementById('i').innerHTML=this.value">
+						<p id="i">test</p>
+					</form>
 					<label class="switch">
 					  <input type="checkbox" id="checkbox">
 					  <div class="slider round"></div>
 					</label>
-					<form class="sliderForm">
-						<p>What % of your grade is the Final?</p>
-						<input class= "rangeSlider" type="range" value="50" oninput="document.getElementById('i').innerHTML=this.value">
-						<p id="i">test</p>
-					</form>
 				</div>
 			</div>
 		</div>
